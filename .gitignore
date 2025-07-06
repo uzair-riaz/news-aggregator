@@ -1,0 +1,17 @@
+# Node.js
+frontend/node_modules/
+
+# Laravel
+backend/vendor/
+backend/storage/*.key
+
+# System Files
+.DS_Store
+Thumbs.db
+*.log
+
+# Docker
+docker-compose.override.yml
+
+frontend/.env
+backend/.env
