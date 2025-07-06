@@ -1,45 +1,37 @@
 # News Aggregator
 
-News Aggregator is a full-stack web application that collects, filters, and displays articles from multiple news sources. The app allows users to search and filter articles based on various criteria and manage their news preferences.
+A full-stack web application that collects, filters, and displays articles from multiple news sources with user preference management.
 
 ## Features
 
 ### Frontend
-
-- Built with **React** and **Tailwind CSS** and **ShadCn**.
-- Real-time search and filtering options for articles.
-- Infinite scrolling for seamless browsing.
-- Multi-select filters for authors, categories, and sources.
-- Responsive design for mobile, tablet, and desktop.
+- **React** with **Tailwind CSS** and **ShadCn**
+- Real-time search and filtering
+- Infinite scrolling
+- Multi-select filters for authors, categories, and sources
+- Responsive design
 
 ### Backend
-
-- Built with **Laravel**.
-- Supports **cursor-based pagination** for efficient data handling.
-- Provides a robust API for managing articles and user preferences.
-- Queue management for background tasks using **Laravel Queue**.
-- Scheduled commands for periodic operations.
+- **Laravel** API with cursor-based pagination
+- Queue management for background tasks
+- Scheduled commands for periodic operations
 
 ### Database
-
-- Uses **MySQL** as the relational database for managing articles, preferences, and user data.
+- **MySQL** for articles, preferences, and user data
 
 ---
 
 ## Technologies Used
 
 ### Frontend
-
-- **React**: JavaScript library for building user interfaces.
-- **Tailwind CSS**: Utility-first CSS framework for styling.
-- **Redux**: State management library.
-- **React Infinite Scroll Component**: For infinite scrolling functionality.
+- **React** with **Redux** for state management
+- **Tailwind CSS** for styling
+- **React Infinite Scroll Component**
 
 ### Backend
-
-- **Laravel**: PHP framework for backend development.
-- **MySQL**: Relational database for storing data.
-- **Docker**: Containerization for consistent development and deployment environments.
+- **Laravel** (PHP framework)
+- **MySQL** database
+- **Docker** for containerization
 
 ---
 
@@ -59,13 +51,13 @@ Ensure you have the following installed on your machine:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/ArmashXD/news-aggregator
+git clone https://github.com/uzair-riaz/news-aggregator.git
 cd news-aggregator
 ```
 
 ### 2. Environment Variables
 
-- Create a .env file in the backend directory and configure it as follows
+Create a `.env` file in the backend directory:
 
 ```bash
 APP_NAME=NEWS
@@ -134,7 +126,7 @@ NEW_YORK_TIMES_API_KEY=iM9YWp0lWidBO3WbEcJyaVtADOywCh8J
 NEW_YORK_TIMES_APP_SECRET=Lxn5UJ7dm5BajAPw
 ```
 
-- Create a .env file in the frontend directory for any frontend-specific configurations .
+Create a `.env` file in the frontend directory:
 
 ```bash
 VITE_BASE_URL=http://127.0.0.1:8000/api/v1
@@ -166,47 +158,28 @@ php artisan migrate
 php artisan queue:work
 ```
 
-### Key Features in Detail
+### Key Features
 
-- Article Search and Filtering
-- Users can search and filter articles by:
-
-### Keywords
-
-- Authors (multi-select)
-- Categories (multi-select)
-- Sources (multi-select)
-- Date (filter by specific date)
-- Infinite Scrolling
-- Articles are displayed with infinite scrolling to enhance user experience and performance.
-
-### User Preferences
-
-- Users can set their preferences for:
-
-### Favorite authors, categories, and sources.
-
-- These preferences are saved and applied to the news feed
+- **Article Search and Filtering**: Keywords, authors, categories, sources, and date
+- **Infinite Scrolling**: Enhanced user experience and performance
+- **User Preferences**: Save favorite authors, categories, and sources
 
 ### Development
 
-Running Locally Without Docker If docker compose is not working
+Running locally without Docker:
 
-### Backend
-
+**Backend:**
 ```bash
 cd backend
-composer update && composer install
+composer install
 php artisan migrate:fresh
 php artisan schedule:work
 php artisan serve
 ```
 
-### Frontend
-
+**Frontend:**
 ```bash
 cd frontend
 npm install
 npm run dev
-
 ```
